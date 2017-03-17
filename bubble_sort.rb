@@ -1,8 +1,5 @@
 class BubbleSort
 
-  def initialize
-  end
-
   def sort(data)
 
     sorted_data = []
