@@ -4,16 +4,21 @@ class BubbleSort
   end
 
   def sort(data)
+
+    sorted_data = []
     
-    data.length.times do
+    until data.length == 0 do
       previous = data[0]
       current = data[1]
       pass_complete = false
-      index = 1 
+      index = 1
 
       until pass_complete == true do
 
-        if previous > current
+        if current == nil
+          sorted_data.unshift(data.pop)
+          return sorted_data
+        elsif previous > current
             temporary_holder = previous
             data[index - 1] = current
             data[index] = temporary_holder
@@ -25,12 +30,12 @@ class BubbleSort
             current = data[index]
 
         if index == (data.length)
-          pass_complete = true  
+          sorted_data.unshift(data.pop)
+          pass_complete = true
         end
 
       end
     end  
-    return data
   end
 
 end
