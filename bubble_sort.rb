@@ -5,6 +5,7 @@ class BubbleSort
     sorted_data = []
     
     until data.length == 0 do
+
       previous = data[0]
       current = data[1]
       pass_complete = false
@@ -12,10 +13,7 @@ class BubbleSort
 
       until pass_complete == true do
 
-        if current == nil
-          sorted_data.unshift(data.pop)
-          return sorted_data
-        elsif previous > current
+        if data.length > 1 && previous > current
             temporary_holder = previous
             data[index - 1] = current
             data[index] = temporary_holder
@@ -26,13 +24,17 @@ class BubbleSort
             previous = data[index - 1]
             current = data[index]
 
-        if index == (data.length)
+        if index == (data.length) || data.length == 1
           sorted_data.unshift(data.pop)
           pass_complete = true
         end
 
       end
-    end  
+
+    end 
+
+    return sorted_data 
+    
   end
 
 end
