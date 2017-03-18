@@ -1,6 +1,6 @@
 window.onload = function bubbleSort() {
 
-  var data = ["d", "c", "a", "b"]
+  var data = ["d", "c", "a", "b", "w", "y", "z", "x"]
 
   var sorted_data = [];
 
@@ -34,11 +34,16 @@ window.onload = function bubbleSort() {
   }
   
   while (sorted_data.length > 0) {
-    var newDiv = document.createElement("div");
-    newDiv.style.width = "35px";
-    newDiv.style.height = "35px";
-    newDiv.innerHTML = sorted_data.shift();
-    document.getElementById("sorted-elements-container").appendChild(newDiv);
+
+    var elementContainer = document.createElement("div");
+    elementContainer.className = "element-container";
+
+    var element = document.createElement("div");
+    element.innerHTML = sorted_data.shift();
+
+    elementContainer.appendChild(element);
+    document.getElementById("sorted-elements-container").appendChild(elementContainer);
+
   }
 
 }
