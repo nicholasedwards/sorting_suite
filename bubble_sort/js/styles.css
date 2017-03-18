@@ -1,0 +1,11 @@
+#content-container {
+  margin: 0 auto;
+  width: 400px;
+}
+
+#sorted-elements-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
