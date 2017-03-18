@@ -10,8 +10,6 @@ class InsertionSort
       
       element_to_insert = data.shift
 
-      inserted = false
-
       index = sorted_data.length - 1
 
       loop do
