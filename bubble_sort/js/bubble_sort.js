@@ -2,8 +2,23 @@ window.onload = function bubbleSort() {
 
   var data = ["d", "c", "a", "b", "w", "y", "z", "x"]
 
+  // Put the unsorted data in the DOM
+  for (i = 0; i < data.length; i++) {
+
+    var elementContainer = document.createElement("div");
+    elementContainer.className = "element-container";
+
+    var element = document.createElement("div");
+    element.innerHTML = data[i];
+
+    elementContainer.appendChild(element);
+    document.getElementById("unsorted-elements-container").appendChild(elementContainer);
+
+  }  
+
   var sorted_data = [];
 
+  // Sort the data
   while (data.length > 0) {
 
     var previous = data[0];
@@ -32,18 +47,19 @@ window.onload = function bubbleSort() {
     }
 
   }
-  
-  while (sorted_data.length > 0) {
+
+  // Put the sorted data in the DOM
+  for (i = 0; i < sorted_data.length; i++) {
 
     var elementContainer = document.createElement("div");
     elementContainer.className = "element-container";
 
     var element = document.createElement("div");
-    element.innerHTML = sorted_data.shift();
+    element.innerHTML = sorted_data[i];
 
     elementContainer.appendChild(element);
     document.getElementById("sorted-elements-container").appendChild(elementContainer);
 
-  }
+  }  
 
 }
