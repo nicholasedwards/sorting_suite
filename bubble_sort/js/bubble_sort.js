@@ -1,6 +1,9 @@
 window.onload = function bubbleSort() {
 
-  var data = ["d", "c", "a", "b", "w", "y", "z", "x"]
+  var data = [];
+  for (i = 0; i < 7; i++){
+    data[i] = Math.floor(Math.random() * 100);
+  }
 
   // Put the unsorted data in the DOM
   for (i = 0; i < data.length; i++) {
@@ -62,4 +65,8 @@ window.onload = function bubbleSort() {
 
   }  
 
+}
+
+function randomizeData() {
+  location.reload();
 }
