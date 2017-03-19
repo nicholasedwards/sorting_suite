@@ -8,7 +8,7 @@ class TestSort < MiniTest::Unit::TestCase
     @merge_sorter = MergeSort.new
   end
 
-  def test_that_insertion_sort_works
+  def test_that_merge_sort_works
     assert_equal ["a", "b", "c", "d"], @merge_sorter.sort(@data)
   end
 
