@@ -1,0 +1,39 @@
+#content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+}
+
+#sorted-elements-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+#unsorted-elements-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+.element-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+}
+
+.label {
+  margin-top: 50px;
+}
+
+.button {
+  margin-top: 40px;
+}
